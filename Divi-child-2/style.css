@@ -11,11 +11,12 @@
 /* =Theme customization starts here
 ------------------------------------------------------- */
 
-/*AJUSTE CONTACTO*/
-#wpcf7-f2797-p81-o1.wpcf7 input.wpcf7-form-control.wpcf7-text {width: 90%;}
-#wpcf7-f2797-p81-o1.wpcf7 textarea.wpcf7-form-control.wpcf7-textarea {width: 90%;}
-#wpcf7-f2797-p81-o1.wpcf7 form.wpcf7-form p input.wpcf7-form-control.wpcf7-submit {display: flex;float: right;width: 120px;border: none;background:#eac102;color:white;font-size: large;margin-right: 10%;height: 34px;font-weight: 550;border-radius: 5px;}
 
+/*AJUSTE CONTACTO*/
+#wpcf7-f2797-p81-o1.wpcf7 input.wpcf7-form-control.wpcf7-text {width: 100%;}
+#wpcf7-f2797-p81-o1.wpcf7 textarea.wpcf7-form-control.wpcf7-textarea {width: 100%;}
+#wpcf7-f2797-p81-o1.wpcf7 form.wpcf7-form p input.wpcf7-form-control.wpcf7-submit {display: flex;width: 120px;border: none;background:#eac102;color:white;font-size: large;height: 34px;font-weight: 550;border-radius: 5px;margin-top: 10px;margin-left: auto;margin-right: auto;float: none; justify-content:center;}
+#wpcf7-f2797-p81-o1.wpcf7 form.wpcf7-form div.wpcf7-form-control-wrap div.wpcf7-form-control.g-recaptcha.wpcf7-recaptcha div {display: block;margin-left: auto;margin-right: auto;}
 
 
 /*
@@ -80,8 +81,10 @@ MODIFICACIONES ESTILO TIENDA Y FILTRO
     -moz-transition: all .4s;
     transition: all .4s;
 }
-	.woocommerce-loop-product__title{font-size: 16px !important;line-height:130%;font-weight: 550!important;}
-		
+	.woocommerce-loop-product__title{font-size: 16px !important;line-height:130%;font-weight: 550!important; text-align:center; padding-bottom:0px !important;}
+	.product .price {text-align:center;}
+	.entry-summary .price {text-align:left;}
+	
 	.single_add_to_cart_button{position: absolute;}
 	.woocommerce-variation-add-to-cart {display: flex;}
 	#left-area div.single_variation_wrap div.quantity {overflow: visible !important;}
@@ -286,7 +289,10 @@ PERSONALIZACION CSS MOVIL
 	#et-info .whatsappicon {display: inline-block; width:18px; height:18px;
 		background:url(https://www.ceramicaramblena.com/wp-content/themes/Divi-child-2/images/ico_whatsapp.png) no-repeat;
 		background-size: 18px 18px;margin-top:-1px!important;} 
-	#et-info .whatsappicon img {display:none } 
+	#et-info .whatsappicon img {
+		visibility: hidden;
+		margin-top: -20px;
+	} 
 
 /* AMPLIAR 100% TAMAÑO CAMPO DE BUSQUEDA */
 	.container.et_search_form_container{width:100%!important;background:#fff!important;}
@@ -322,11 +328,7 @@ PERSONALIZACION CSS MOVIL
 	#qcCmpUi.qc-cmp-ui.qc-cmp-showing div.qc-cmp-nav-bar.qc-cmp-bottom div.qc-cmp-nav-bar-div-child {margin-right: 20px;display:grid;}
 
 
-/*AJUSTE CONTACTO*/
-#wpcf7-f2797-p81-o1.wpcf7 input.wpcf7-form-control.wpcf7-text {width: 100%;}
-#wpcf7-f2797-p81-o1.wpcf7 textarea.wpcf7-form-control.wpcf7-textarea {width: 100%;}
-#wpcf7-f2797-p81-o1.wpcf7 form.wpcf7-form p input.wpcf7-form-control.wpcf7-submit {display: flex;width: 120px;border: none;background:#eac102;color:white;font-size: large;height: 34px;font-weight: 550;border-radius: 5px;margin-top: 10px;margin-left: auto;margin-right: auto;float: none;}
-#wpcf7-f2797-p81-o1.wpcf7 form.wpcf7-form div.wpcf7-form-control-wrap div.wpcf7-form-control.g-recaptcha.wpcf7-recaptcha div {display: block;margin-left: auto;margin-right: auto;}
+
 
 }
 /* FIN PERSONALIZACION CSS MOVIL
@@ -373,7 +375,35 @@ margin-top:0px !important;
 	} 	
 }
 
+.et_pb_section_0.et_pb_section { padding-bottom:0px !important;}
+
 /* migas de pan woo ajuste */
 .woocommerce .woocommerce-breadcrumb {
     margin-top: 1em;
 }
+
+#sidebar {margin-top:15px;}
+
+.g-recaptcha div {max-width:100% !important;}
+
+.et_pb_text_5, .et_pb_text_3, .related.products h2, h1.entry-title {background-color:#eee !important;}
+div.et_pb_bg_layout_dark {background-color:transparent!important;}
+h1.product_title {background-color:#fff !important; }
+h1.entry-title { margin-top:15px; padding: 16px 20px;}
+
+.woocommerce-loop-product__link h2.woocommerce-loop-product__title { background:#fff !important;  text-align:center !important;}
+h2.woocommerce-loop-category__title {text-align:center !important; color:#dAb100!important; font-size:16px !important; font-weight:600;}
+
+#left-area .product-type-variable {background: #fff !important;}
+
+.more-link { text-transform:capitalize; background-color:#eAc102!important; padding:10px 15px; color:#fff; margin-top:25px;  transition-duration:600ms; border-radius:5px;}
+.more-link:hover { color:#666; background-color:#ddd !important; transition-duration:600ms;}
+.post-content-inner {margin-bottom:15px;}
+
+.woocommerce-message a.button.wc-forward {margin:-4px 0px; background-color:#fff!important; color:#666 !important; transition-duration:600ms; }
+.woocommerce-message a:hover.button.wc-forward { color:#666; transition-duration:600ms; background-color:#ddd !important; }
+
+.cart_totals table td {text-align:right !important;}
+
+.woocommerce-cart table.cart td.actions .coupon .input-text {width:100% !important;  margin-bottom:5px; font-size: 16px !important;}
+.coupon button.button {width:100% !important; }
