@@ -1,0 +1,5 @@
+.g-recaptcha-wrap,.wpcf7-form-control-wrap{float: left;clear: both;text-align: center;width: 100%;}
+.g-recaptcha-wrap .g-recaptcha > div,.wpcf7-form-control-wrap .g-recaptcha > div{max-width:100%!important;float:none;position: relative;margin: 0px auto;overflow:hidden!important;}
+
+.g-recaptcha{height:76px;border-right: 1px solid #ccc;border-radius:2px;}
+.g-recaptcha > div{max-width:100%;}

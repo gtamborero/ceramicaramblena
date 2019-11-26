@@ -1,0 +1,296 @@
+/*
+ Theme Name:     Divi Child
+ Theme URI:      https://www.elegantthemes.com/gallery/divi/
+ Description:    Divi Child Theme
+ Author:         Elegant Themes
+ Author URI:     https://www.elegantthemes.com
+ Template:       Divi
+ Version:        1.0.0
+*/
+
+/* =Theme customization starts here
+------------------------------------------------------- */
+
+
+/*
+AJUSTE ALTURA PARA EVITAR REDIMENSIONADO AL CARGAR
+*/
+	body.et_fixed_nav.et_secondary_nav_enabled #main-header, body.et_non_fixed_nav.et_transparent_nav.et_secondary_nav_enabled #main-header {top: 41px;}
+	.et_fixed_nav.et_show_nav.et_secondary_nav_enabled #page-container, .et_non_fixed_nav.et_transparent_nav.et_show_nav.et_secondary_nav_enabled #page-container {padding-top: 105px;}
+/* FIN MENU COLLAPSE
+------------------------------------------------------- */
+
+
+
+/*
+MENU MODIF COLLAPSE
+*/
+    #main-header .et_mobile_menu .menu-item-has-children > a { background-color: transparent; position: relative; } 
+    #main-header .et_mobile_menu .menu-item-has-children > a:after { font-family: 'ETmodules'; text-align: center; speak: none; font-weight: normal; font-variant: normal; text-transform: none; -webkit-font-smoothing: antialiased; position: absolute; } 
+    #main-header .et_mobile_menu .menu-item-has-children > a:after { font-size: 16px; content: '\e050';  color:#eac102; top: 13px; right: 10px; } 
+    #main-header .et_mobile_menu .menu-item-has-children.visible > a:after { content: '\4f'; color:#eac102 } 
+    #main-header .et_mobile_menu ul.sub-menu { display: none !important; visibility: hidden !important;  transition: all 1.5s ease-in-out;} 
+    #main-header .et_mobile_menu .visible > ul.sub-menu { display: block !important; visibility: visible !important; } 
+
+/* FIN MENU COLLAPSE
+------------------------------------------------------- */
+
+/*
+MODIFICACIONES ESTILO TIENDA Y FILTRO
+*/
+	.search-field {width: 100%;clear: both;font-size: 14px;line-height: 18px;margin-bottom: 10px;padding:5px 5px;box-sizing: border-box;border-style: solid;border-width: thin;}
+	button {width: 100%;clear: both;text-align: center;padding-top: 10px;padding-bottom: 10px;;color: #fff;background: #222;font-size: 16px;border: none;border-radius: 3px;cursor: pointer;}
+	h4.widgettitle{border-bottom:2px solid #eac102;margin-bottom:20px;padding-bottom:5px;}
+	.widget_product_categories > ul > li{margin-bottom:10px;border-bottom:1px dotted #ccc;padding-bottom:10px;}
+	.widget_product_categories li ul.children{border-top:0px dotted #ccc;padding-top:20px;}
+	.widget_product_categories > ul > li > a {font-weight: bold;}
+	
+	h2.woocommerce-loop-category__title{color:#eac102;}
+	mark{background:none;color:#eac102;}
+
+	/*#left-area .woocommerce-Price-amount.amount {Font-weight: 600;font-size: 15px !important;color: #eac102 !important;}*/
+	#left-area a.woocommerce-LoopProduct-link.woocommerce-loop-product__link span.price {Font-weight: 600;font-size: 15px ;color: #eac102 !important;}
+	
+	.et_pb_shop_0 .et_overlay::before,.et_pb_shop_1 .et_overlay::before,.et_pb_shop_2 .et_overlay::before{
+	color:#eac102;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    margin: -16px 0 0 -16px;
+    font-size: 32px;
+    content: "\e050";
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    transition: all .4s;
+}
+	.woocommerce-loop-product__title{font-size: 15px !important;line-height:130%}
+		
+	.single_add_to_cart_button{position: absolute;}
+	.woocommerce-variation-add-to-cart {display: flex;}
+	#left-area div.single_variation_wrap div.quantity {overflow: visible !important;}
+	#left-area div.summary.entry-summary p.price {padding-bottom: 40px;}
+	.woocommerce div.product form.cart .variations {padding-bottom: 40px;width:auto;}
+	#left-area .product-type-simple div.clearfix div.summary.entry-summary form.cart {display: flex;}
+	#left-area  div.summary.entry-summary form.cart .quantity{overflow: visible !important;}
+	
+	
+	div.woocommerce-variation.single_variation {padding-bottom: 33px;}
+	#left-area div.woocommerce-notices-wrapper div.woocommerce-message{border-radius: 5px;}
+	
+	
+	#left-area .product-type-variable section.related.products h2 {background: #aaa;	padding: 16px;	text-align: center;font-weight: bold;	margin-bottom:30px}
+	#left-area .product-type-variable section.related.products .woocommerce-loop-product__title {font-size: 15px!important;background: none;text-align: left;padding: initial;font-weight: normal;margin-bottom: auto;}
+	#left-area .product-type-simple section.related.products h2 {background: #aaa;	padding: 16px;	text-align: center;font-weight: bold;	margin-bottom:30px}
+	#left-area .product-type-simple section.related.products .woocommerce-loop-product__title {font-size: 15px!important;background: none;text-align: left;padding: initial;font-weight: normal;margin-bottom: auto;}
+	
+	#left-area .single_variation div.woocommerce-variation-price span.price {font-weight: 600;}
+
+
+/*
+MODIFICACIONES GENERAL CARRITO
+*/
+	.woocommerce-cart-form div.quantity .input-text.qty.text {font-size: 16px !important;}
+	#post-51.post-51.page.type-page.status-publish.hentry h1.entry-title.main_title{background: #aaa;padding: 16px;font-weight: bold;text-align: center;}
+	#post-52.post-52.page.type-page.status-publish.hentry div.entry-content div.woocommerce form.checkout.woocommerce-checkout h3#order_review_heading{margin-top: 40px;background-color: black;font-weight: bold;background: #aaa;padding: 16px;margin-bottom: 20px;text-align: center;}
+	#post-52  tr.cart-subtotal td,tr.woocommerce-shipping-totals.shipping td, .product-total, tr.order-total td  {text-align: right;}
+	#post-51 div.woocommerce-message a.restore-item{color: #000;}
+	#post-51 div.woocommerce-notices-wrapper p.cart-empty.woocommerce-info{border-radius: 5px;}
+
+/*
+AJUSTE ICONO WHATSAPP
+*/
+	#et-info div.whatsappicon img{height:29px;width:auto;}
+	#et-info div.whatsappicon{max-height:28px;float:left;margin-right:20px;margin-top:-8px;}
+
+	#footer-bottom .whatsappicon img{height:29px;width:auto;}
+	#footer-bottom .whatsappicon{max-height:28px;float:left;margin-right:20px;margin-top:-2px;}
+	
+/* FIN AJUSTE ICONO WHATSAPP
+------------------------------------------------------- */
+
+/*
+OCULTAR ICONO WHATSAPP-MOVIL
+*/
+.whatsapp_mobile {display: none;}
+/* FIN ICONO WHATSAPP-MOVIL
+------------------------------------------------------- */
+
+/*
+OCULTAR ICONOS REDES SOCIALES
+*/
+	#top-header .et-social-icons {display: none;}
+/* FIN OCULTAR ICONOS REDES SOCIALES
+------------------------------------------------------- */
+
+
+/*
+AJUSTE HOVER TELEFONO
+*/
+#et-info-phone:hover {opacity: .7;-webkit-transition: all .4s ease-in-out;-moz-transition: all .4s ease-in-out;transition: all .4s ease-in-out;}
+/* FIN OCULTAR ICONOS REDES SOCIALES
+------------------------------------------------------- */
+
+/*
+MOSTRAR CARRITO EN MOVIL
+*/
+#et-secondary-menu {
+    display: block!important;
+}
+/* FIN MOSTRAR CARRITO EN MOVIL
+------------------------------------------------------- */
+
+
+/*
+DISEÑO BOTON
+*/
+	.button, .btn_main,.et_pb_button,#submit{color:#ffffff!important;}
+	.button:hover,.btn_main:hover,.et_pb_button:hover,#submit:hover{color:#444444!important;}
+/* FIN DISEÑO BOTON
+------------------------------------------------------- */
+
+/*
+BOTON COKKIES
+*/
+/*.qc-cmp-button.qc-cmp-secondary-button, .qc-cmp-button.qc-cmp-disable-button{margin: auto 0 !important;   margin-right: 10px !important;}*/
+
+/* BOTON COKKIES
+------------------------------------------------------- */
+
+
+.et_overlay.et_pb_inline_icon::before, .et_pb_inline_icon::before {content: "\e050";}
+
+
+
+/*
+PERSONALIZACION CSS ESCRITORIO
+*/
+@media (min-width:1024px){
+	
+/* ALINEAR DERECHA IDIOMA */
+	#mlp_widget-3.widget.mlp_widget div.mlp-language-box.mlp_language_box {position: absolute;right: 151px;}
+
+/* DISEÑO MENU SUPERIOR */
+	#top-menu li li{padding:5px 0px;margin-bottom:0px;width:100%;}
+	#top-menu li li a{padding:5px 20px;padding-right:0px;width:100%;}
+	#top-menu li li a:hover{background-color:#eac102;color:#444;}
+	#top-menu > li a:hover{color:#eac102;}
+	#top-menu .submenu{padding:5px 0px!;}
+
+/* MODIFICACIÓN ANCHO GUADRICULA PRODUCTOS */
+	.container {width: 90%;max-width: none;}
+	
+
+/* CENTRADO COPYRIGTH ANCHO GUADRICULA PRODUCTOS */
+	#footer-info {float: none;text-align: center;}
+	
+/* FORZAR CUATRO COLUMNAS PRODUCTOS */
+	.woocommerce ul.products li.product {width: 21% !important;margin: 2% !important;clear: none !important;}
+    .woocommerce ul.products li.product:nth-child(4n+1) {clear: both !important;}
+
+/* FIN CARRITO Y PAGO*/
+
+	/*div.woocommerce form.woocommerce-cart-form{display: inline-flex;width: 60%;}
+	div.woocommerce div.cart-collaterals{display: inline-flex;float: right;}*/
+	div.woocommerce form.woocommerce-cart-form{display: inline-flex;width: 150%;}
+	div.woocommerce div.cart-collaterals{float: right;width: 90%;padding-left: 50px;}
+	#post-51.post-51.page.type-page.status-publish.hentry div.entry-content div.woocommerce {display: flex;}
+	.woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals {width: 100%;}
+	
+	.actions div.coupon{padding-bottom: 10px;float: right !important;display: inline-flex;}
+	.actions div.coupon input#coupon_code.input-text {width: 200px;font-size: 16px !important;}
+
+	#order_review.woocommerce-checkout-review-order table.shop_table.woocommerce-checkout-review-order-table{width: 48%;}
+	#post-52.post-52.page.type-page.status-publish.hentry div.entry-content div.woocommerce form.checkout.woocommerce-checkout div#order_review.woocommerce-checkout-review-order div#payment.woocommerce-checkout-payment{width: 50%;margin-left: 5%;height: max-content;}
+	#post-52.post-52.page.type-page.status-publish.hentry div.entry-content div.woocommerce form.checkout.woocommerce-checkout div#order_review.woocommerce-checkout-review-order{display: flex;}
+	#post-51.post-51.page.type-page.status-publish.hentry div.entry-content div.woocommerce div.woocommerce-notices-wrapper div.woocommerce-message{margin-right: 20px;}
+	#post-51.post-51.page.type-page.status-publish.hentry div.entry-content div.woocommerce p.return-to-shop {margin-left: auto;}
+	#post-51 div.woocommerce-notices-wrapper p.cart-empty.woocommerce-info{width: max-content;}
+	.woocommerce td.product-remove:before{content:"Eliminar";font-size:12px; font-weight:normal;float:right}
+	.woocommerce .product-remove{width: 80px;}
+
+/*BOTON COKKIES*/
+	#qcCmpUi.qc-cmp-ui.qc-cmp-showing div.qc-cmp-nav-bar.qc-cmp-bottom div.qc-cmp-nav-bar-div-child {margin-right: 20px;display:contents;}
+	.qc-cmp-nav-bar-buttons-container{margin-right: 20px !important;}
+	.qc-cmp-button.qc-cmp-secondary-button, .qc-cmp-button.qc-cmp-disable-button{margin: auto 0 !important;   margin-right: 10px !important;}
+	
+}
+/* FIN PERSONALIZACION CSS ESCRITORIO
+------------------------------------------------------- */
+
+
+/*
+PERSONALIZACION CSS MOVIL
+*/
+@media (max-width:1023px){
+	#top-header .container{width:90%;}
+
+/* OCULTAR TEXTO EMAIL Y TELEFONO DUPLICADO */
+	#et-info-phone{overflow:hidden;display:inline-block;width:16px;height:16px;margin-right:10px;margin-left: -5px;}
+	#et-info-phone::before {top: 1px;}
+	#et-info-email{overflow:hidden;display:inline-block;width:16px;height:16px;padding-top:1px;margin-right:8px;}
+
+/* ALINEACCIÓN TELF. EMAIL FLOAT LEFT CON LOGO WHATSAPP */
+	#et-info{float:left;margin-top:-10px;}
+
+/* OCULTAR WHATSAPP DUPLICADO */
+	.et_duplicate_social_icons .whatsappicon {display: none;}
+
+/* CENTRAR WHATSAPP EN FOOTER */
+	#footer-bottom .whatsappicon{width:100%;clear:both;text-align:center;}
+
+/* ALINEACIÓN CARRITO CENTRO DISPOSITIVO */
+	#top-header .et-cart-info {position:absolute !important;left:50%;margin-left:-41px;top:50%;margin-top: -14px;}
+
+/* SUSTITUCIÓN ICONO WHATSAPP MENU */
+	#et-info .whatsappicon {display: inline-block; width:18px; height:18px;
+		background:url(https://www.ceramicaramblena.com/wp-content/themes/Divi-child-2/images/ico_whatsapp.png) no-repeat;
+		background-size: 18px 18px;margin-top:-1px!important;} 
+	#et-info .whatsappicon img {display:none } 
+
+/* AMPLIAR 100% TAMAÑO CAMPO DE BUSQUEDA */
+	.container.et_search_form_container{width:100%!important;background:#fff!important;}
+	.et_header_style_left .et-search-form{width:100%!important;max-width:100%!important;}
+
+/* MOSTRAR TEXTO MENU */
+	.mobile_nav .select_page {display: block; font-size: 11px;margin-top: -8px;}
+
+/* COLORES MENU MOVIL Y TAMAÑO TEXTO */
+	#mobile_menu li.current-menu-item>a {color: #eac102 !important;}
+	#mobile_menu li.current-menu-ancestor>a {color: #eac102 !important;}
+	#main-header .et_mobile_menu .menu-item-has-children > a:active {background: #eac102 !important;color:#fff}
+	#main-header .et_mobile_menu li a:active {background: #eac102 !important;color:#fff}
+	#main-header .et_mobile_menu .menu-item-has-children.visible > a:active:after {color: #fff}
+	#main-header .et_mobile_menu li a:active:after {color:#fff}
+
+	#mobile_menu li>a {font-size: 15px;}
+	.et_mobile_menu li .menu-item > a {font-size: 14px !important;}
+	#mobile_menu li.menu-item.menu-item-type-post_type > a {font-weight: bold !important;}
+	#mobile_menu.et_mobile_menu li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-has-children.menu-item.visible ul.sub-menu li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item a {font-weight: inherit  !important;}
+
+/* CENTRAR ICONOS REDES SOCIALES FOOTER */
+	#footer-bottom .et-social-icons {margin-left: -28px;}
+
+/* ALINEAR DERECHA IDIOMA */
+	#mlp_widget-3.widget.mlp_widget div.mlp-language-box.mlp_language_box {float: right;}
+	
+/*MODIFICACIONES GENERAL CARRITO*/
+	#post-51 p.return-to-shop{padding-bottom: 20px;}
+	.woocommerce td.product-remove:after {content:"Eliminar";font-size:12px; font-weight:normal;float:left;margin-top:-19px;margin-left:30px;}
+
+/*BOTON COKKIES*/
+	#qcCmpUi.qc-cmp-ui.qc-cmp-showing div.qc-cmp-nav-bar.qc-cmp-bottom div.qc-cmp-nav-bar-div-child {margin-right: 20px;display:grid;}
+
+
+}
+/* FIN PERSONALIZACION CSS MOVIL
+------------------------------------------------------- */
+
+/*
+PERSONALIZACION ESPECIAL CSS MOVIL COKKIES
+*/
+@media (max-width:500px){
+	#qcCmpUi.qc-cmp-ui.qc-cmp-showing div.qc-cmp-nav-bar.qc-cmp-bottom div.qc-cmp-nav-bar-div-child {margin-right: 20px;display: inline-flex;}
+	
+	}
+	/* FIN PERSONALIZACION CSS MOVIL
+------------------------------------------------------- */
