@@ -60,6 +60,15 @@ function registrar_sidebar(){
 }
 add_action( 'widgets_init', 'registrar_sidebar');
 
+// remove dashicons in frontend to non-admin 
+    function wpdocs_dequeue_dashicon() {
+        if (current_user_can( 'update_core' )) {
+            return;
+        }
+        wp_deregister_style('dashicons');
+    }
+    add_action( 'wp_enqueue_scripts', 'wpdocs_dequeue_dashicon' );
+
 /* Describe what the code snippet does so you can remember later on */
 add_action('wp_footer', 'your_function_name');
 function your_function_name(){
