@@ -4,7 +4,7 @@ function my_theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
-
+/*
 function dcms_insertar_js(){
 
     	wp_register_script('miscript', get_stylesheet_directory_uri(). '/js/menumovil.js', array('jquery'), '1', true );
@@ -12,7 +12,7 @@ function dcms_insertar_js(){
     
 }
 
-add_action("wp_enqueue_scripts", "dcms_insertar_js");
+add_action("wp_enqueue_scripts", "dcms_insertar_js");*/
 
 function my_login_stylesheet() {
     wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/style-login.css' );
@@ -69,44 +69,6 @@ add_action( 'widgets_init', 'registrar_sidebar');
     }
     add_action( 'wp_enqueue_scripts', 'wpdocs_dequeue_dashicon' );
 
-/* Describe what the code snippet does so you can remember later on */
-add_action('wp_footer', 'your_function_name');
-function your_function_name(){
-?>
-
-
-
-<?php
-};
-
-
-// /*** Inicio Modo Mantenimiento ***/
-
-
-
-	
-// $host= $_SERVER["HTTP_HOST"];
-// $url= $_SERVER["REQUEST_URI"];
-
-// echo "http://" . $host . $url;
-// echo $url;
-
-
-// if($url == '/en/?noredirect=en_US'){
-// function mode_maintenance(){
-// if(!current_user_can('edit_themes') || !is_user_logged_in()){
-
-// wp_die('<div style="border:solid 1px grey;"><h1 style="color:#FF942A; text-align:center; text-transform:uppercase;
-// ">Sitio en Mantenimiento</h1><p style="text-align:center;
- // font-size:18px;">Estamos trabajando en el nuevo sitio ¡en breve estaremos online!</p></div>',
- // 'Sitio en Mantenimiento', array( ‘response’ => 503 ));
-
-// }
-
-// }
-
-// add_action('init', 'mode_maintenance');
-// }
 
 /**
  * Use WC 2.0 variable price format, now include sale price strikeout
@@ -134,4 +96,8 @@ function wc_wc20_variation_price_format( $price, $product ) {
 add_filter( 'woocommerce_variable_sale_price_html', 'wc_wc20_variation_price_format', 10, 2 );
 add_filter( 'woocommerce_variable_price_html', 'wc_wc20_variation_price_format', 10, 2 );
 
-?>
+add_action('wp_logout','auto_redirect_after_logout');
+function auto_redirect_after_logout(){
+  wp_redirect( home_url() );
+  exit();
+}
