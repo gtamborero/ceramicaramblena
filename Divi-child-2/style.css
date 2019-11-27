@@ -11,6 +11,56 @@
 /* =Theme customization starts here
 ------------------------------------------------------- */
 
+/* GOOGLE FONTS */
+
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFW50bbck.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0b.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOXOhpOqc.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOUuhp.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXOhpOqc.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUuhp.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 /*AJUSTE CONTACTO*/
 #wpcf7-f2797-p81-o1.wpcf7 input.wpcf7-form-control.wpcf7-text {width: 100%;}
@@ -44,8 +94,12 @@ AJUSTE ALTURA PARA EVITAR REDIMENSIONADO AL CARGAR
 MENU MODIF COLLAPSE
 */
     #main-header .et_mobile_menu .menu-item-has-children > a { background-color: transparent; position: relative; } 
-    #main-header .et_mobile_menu .menu-item-has-children > a:after { font-family: 'ETmodules'; text-align: center; speak: none; font-weight: normal; font-variant: normal; text-transform: none; -webkit-font-smoothing: antialiased; position: absolute; } 
-    #main-header .et_mobile_menu .menu-item-has-children > a:after { font-size: 16px; content: '\e050';  color:#eac102; top: 13px; right: 10px; } 
+    
+    #main-header .et_mobile_menu .menu-item-has-children > a:after { font-size: 16px; content: '\e050';  color:#eac102; top: 13px; right: 10px; 
+	font-family: ETmodules;
+    float: right;
+    font-weight: normal; 
+	} 
     #main-header .et_mobile_menu .menu-item-has-children.visible > a:after { content: '\4f'; color:#eac102 } 
     #main-header .et_mobile_menu ul.sub-menu { display: none !important; visibility: hidden !important;  transition: all 1.5s ease-in-out;} 
     #main-header .et_mobile_menu .visible > ul.sub-menu { display: block !important; visibility: visible !important; } 
@@ -390,6 +444,7 @@ margin-top:0px !important;
 div.et_pb_bg_layout_dark {background-color:transparent!important;}
 h1.product_title {background-color:#fff !important; }
 h1.entry-title { margin-top:15px; padding: 16px 20px;}
+h2.entry-title {font-size:24px;}
 
 .woocommerce-loop-product__link h2.woocommerce-loop-product__title { background:#fff !important;  text-align:center !important;}
 h2.woocommerce-loop-category__title {text-align:center !important; color:#dAb100!important; font-size:16px !important; font-weight:600;}
@@ -407,3 +462,19 @@ h2.woocommerce-loop-category__title {text-align:center !important; color:#dAb100
 
 .woocommerce-cart table.cart td.actions .coupon .input-text {width:100% !important;  margin-bottom:5px; font-size: 16px !important;}
 .coupon button.button {width:100% !important; }
+
+
+/* POP UP */
+a.icon-button, a.small-button{
+font-size:16px;
+color:#fff;
+background-color: #eac102;
+font-weight: 500!important;
+}
+
+/* ADD TO ANY */
+.addtoany_list{
+float:left;
+margin-top:15px;
+width:100%;
+}
