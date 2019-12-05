@@ -4,7 +4,7 @@ function my_theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
-/*
+
 function dcms_insertar_js(){
 
     	wp_register_script('miscript', get_stylesheet_directory_uri(). '/js/menumovil.js', array('jquery'), '1', true );
@@ -12,7 +12,7 @@ function dcms_insertar_js(){
     
 }
 
-add_action("wp_enqueue_scripts", "dcms_insertar_js");*/
+add_action("wp_enqueue_scripts", "dcms_insertar_js");
 
 function my_login_stylesheet() {
     wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/style-login.css' );
@@ -101,3 +101,35 @@ function auto_redirect_after_logout(){
   wp_redirect( home_url() );
   exit();
 }
+
+/* IPROJECT RECAPTCHA Y CONTACT FORM solo carga en contacto */
+
+add_filter( 'wpcf7_load_js', '__return_false' );
+add_filter( 'wpcf7_load_css', '__return_false' );
+
+function googleRecaptchaRemove() {
+    wp_dequeue_script( 'google-recaptcha' );
+}
+add_action( 'wp_print_scripts', 'googleRecaptchaRemove', 100 );
+
+function googleRecaptchaAdd() {
+	if ( is_page( 'contacto' ) ) {
+		wp_enqueue_script( 'google-recaptcha' );
+	}
+}
+add_action( 'wp_print_scripts', 'googleRecaptchaAdd', 100 );
+
+function ceramica_scripts() {
+    if ( is_page( 'contacto' ) ) {
+        if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
+            wpcf7_enqueue_scripts();
+			wpcf7_enqueue_styles();
+        }
+    }
+}
+add_action( 'wp_enqueue_scripts', 'ceramica_scripts' );
+
+
+// Remove cross-sells at cart
+remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
+
