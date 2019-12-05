@@ -142,7 +142,7 @@ MODIFICACIONES ESTILO TIENDA Y FILTRO
 	.single_add_to_cart_button{position: absolute;}
 	.woocommerce-variation-add-to-cart {display: flex;}
 	#left-area div.single_variation_wrap div.quantity {overflow: visible !important;}
-
+	#left-area div.summary.entry-summary p.price {padding-bottom: 40px;}
 	.woocommerce div.product form.cart .variations {padding-bottom: 40px;width:auto;}
 	#left-area .product-type-simple div.clearfix div.summary.entry-summary form.cart {display: flex;}
 	#left-area  div.summary.entry-summary form.cart .quantity{overflow: visible !important;}
@@ -158,7 +158,7 @@ MODIFICACIONES ESTILO TIENDA Y FILTRO
 	#left-area .product-type-simple section.related.products .woocommerce-loop-product__title {font-size: 15px!important;background: none;text-align: left;padding: initial;font-weight: normal;margin-bottom: auto;}
 	
 	#left-area .single_variation div.woocommerce-variation-price span.price {font-weight: 600;}
-	
+
 
 /*
 MODIFICACIONES GENERAL CARRITO
@@ -472,7 +472,7 @@ a.icon-button, a.small-button{
 font-size:16px;
 color:#fff;
 background-color: #eac102;
-font-weight: 600!important;
+font-weight: 500!important;
 }
 
 /* ADD TO ANY */
@@ -496,53 +496,3 @@ width:100%;
 	padding:2%;
 }
 }
-/* CAMBIO ESTILO ICONO "OFERTA" EN FICHAS PRODUCTO */
-.woocommerce span.onsale, .woocommerce-page span.onsale {
-	background: #eac102 !important;
-	padding: 3px 10px !important;
-	font-size: 18px !important;
-	top: 0px !important;
-	left: 0px !important;
-	border-radius: 0px !important;
-	}
-
-.woocommerce ul.products li.product .onsale, .woocommerce-page ul.products li.product .onsale
-{
-	left: 0px !important;
-}
-
-/* FIN CAMBIO ESTILO ICONO "OFERTA" EN FICHAS PRODUCTO */
-
-/* CAMBIO ESTILO ICONO SCROLL TO TOP */
-.et_pb_scroll_top.et-pb-icon
-{
-	background: #eac102 !important;
-}
-/* FIN CAMBIO ESTILO ICONO SCROLL TO TOP */
-
-/* AUMENTO DE PADDING-BOTTOM #footer-bottom */
-
-#footer-bottom
-{
-	padding-bottom: 24px !important;
-}
-
-/* FIN AUMENTO DE PADDING-BOTTOM #footer-bottom */
-
-.grecaptcha-badge { bottom:36px !important; }
-
-/* AJUSTE WOO con variaciones de texto */
-.woocommerce-variation-add-to-cart{
-    display:grid;
-    grid-template-columns: 23% 77%;
-}
-
-@media (max-width:800px){
-	.woocommerce-variation-add-to-cart{
-		grid-template-columns: 30% 70%;
-	}
-}
-
-.thwepo-extra-options.thwepo_variable {grid-column-start:1;grid-column-end: span 2; margin-top: -25px; }
-.thwepo-extra-options.thwepo_variable td { padding: .857em 0em !important; }
-.single_add_to_cart_button.wc-variation-selection-needed { } 
